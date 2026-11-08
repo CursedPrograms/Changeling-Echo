@@ -18,6 +18,7 @@
 [CopyCat Realtime](https://github.com/CursedPrograms/Changeling-CopyCat-Realtime) (face swap, live) ·
 [Tiresias](https://github.com/CursedPrograms/Changeling-Tiresias) (gender) ·
 [Chronos](https://github.com/CursedPrograms/Changeling-Chronos) (age) ·
+[Natio](https://github.com/CursedPrograms/Changeling-Natio) (where in the world) ·
 [Cosmetics](https://github.com/CursedPrograms/Changeling-Cosmetics) (makeup, hair, beards) · **Echo** (voices).*
 
 Train the voices the Changelings speak with. Echo turns about 15 minutes of one person's speech into an
