@@ -1,0 +1,9 @@
+# Applio: cloned by run.bat (its own repo, MIT)
+Applio/
+# the speech, the environment and the trained voices stay on this PC
+dataset/
+venv/
+voices/
+piper_voices/*.onnx
+__pycache__/
+*.pyc

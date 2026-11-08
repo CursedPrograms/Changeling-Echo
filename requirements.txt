@@ -1,0 +1,4 @@
+# Changeling Echo: Python 3.12. Applio's training engine (Applio/requirements-engine.txt, with PyTorch for
+# CUDA 12.8 from https://download.pytorch.org/whl/cu128) is installed by run.bat; this is Echo's own.
+customtkinter==5.2.2
+pillow
