@@ -21,6 +21,20 @@ STUDIO = os.path.dirname(HERE)
 GITHUB = "https://github.com/CursedPrograms/Changeling-Echo"
 KOFI = "https://ko-fi.com/cursedentertainment"
 PINK = "#e0408a"
+
+BLUE, BLUE_HOVER = "#007ab7", "#005184"     # the Cursed site's blue: the important buttons, and "male"
+
+
+def gender_tint(seg):
+    """Colours a gender selector by what's picked: female pink, male blue, anything else the usual pink."""
+    def tint(value=None):
+        v = (value or seg.get() or "").lower()
+        colour = PINK if ("female" in v or "woman" in v) else BLUE if ("male" in v or v == "man") else PINK
+        seg.configure(selected_color=colour, selected_hover_color=colour)
+    old = seg.cget("command")
+    seg.configure(command=lambda v: (tint(v), old(v) if old else None))
+    tint()
+
 SOURCES = {"Female (Amy)": "female", "Male (Ryan)": "male", "My recordings": "mine"}
 # where trained voices go: every app that speaks with them
 APPS = [os.path.join(STUDIO, "Changeling-Imago-Realtime", "voices"),
@@ -76,6 +90,7 @@ class Window:
         self.source = ctk.CTkSegmentedButton(page, values=list(SOURCES), command=lambda v: self.refresh())
         self.source.set("Female (Amy)")
         self.source.pack(fill="x", padx=12, pady=4)
+        gender_tint(self.source)
         row = ctk.CTkFrame(page, fg_color="transparent")
         row.pack(fill="x", padx=12, pady=4)
         ctk.CTkLabel(row, text="Name").pack(side="left")
@@ -109,7 +124,7 @@ class Window:
         ctk.CTkLabel(page, text="More epochs sound closer to the voice and take longer: about 300 is a good "
                      "voice (an hour or two on a 6 GB card).", text_color="gray55", wraplength=640,
                      justify="left").pack(anchor="w", padx=12)
-        self.train_btn = ctk.CTkButton(page, text="Train", height=40, font=ctk.CTkFont(size=15, weight="bold"),
+        self.train_btn = ctk.CTkButton(page, fg_color=BLUE, hover_color=BLUE_HOVER, text="Train", height=40, font=ctk.CTkFont(size=15, weight="bold"),
                                        command=self.start_training)
         self.train_btn.pack(fill="x", padx=12, pady=6)
 
