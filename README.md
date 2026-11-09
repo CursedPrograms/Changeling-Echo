@@ -13,6 +13,8 @@
 
 **Website:** https://cursedprograms.github.io/Changeling-Echo/
 
+**The name.** Echo was a mountain nymph in Greek myth. Hera, kept talking by her while Zeus slipped away, cursed her to say nothing of her own, only to repeat the last words of others. She faded away for love of Narcissus until nothing was left of her but her voice. Changeling Echo is that voice: someone else's, saying your words.
+
 *Part of the Changeling family, all together in [Changeling Studio](https://github.com/CursedPrograms/Changeling-Studio):
 [Imago](https://github.com/CursedPrograms/Changeling-Imago) ·
 [Imago Realtime](https://github.com/CursedPrograms/Changeling-Imago-Realtime) ·
