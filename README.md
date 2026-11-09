@@ -14,12 +14,18 @@
 **Website:** https://cursedprograms.github.io/Changeling-Echo/
 
 *Part of the Changeling family, all together in [Changeling Studio](https://github.com/CursedPrograms/Changeling-Studio):
-[CopyCat](https://github.com/CursedPrograms/Changeling-CopyCat) (face swap, photos and video) ·
-[CopyCat Realtime](https://github.com/CursedPrograms/Changeling-CopyCat-Realtime) (face swap, live) ·
+[CopyCat](https://github.com/CursedPrograms/Changeling-CopyCat) ·
+[CopyCat Realtime](https://github.com/CursedPrograms/Changeling-CopyCat-Realtime) ·
 [Tiresias](https://github.com/CursedPrograms/Changeling-Tiresias) (gender) ·
 [Chronos](https://github.com/CursedPrograms/Changeling-Chronos) (age) ·
 [Natio](https://github.com/CursedPrograms/Changeling-Natio) (where in the world) ·
-[Cosmetics](https://github.com/CursedPrograms/Changeling-Cosmetics) (makeup, hair, beards) · **Echo** (voices).*
+[Cosmetics](https://github.com/CursedPrograms/Changeling-Cosmetics) (makeup, hair, beards) ·
+**Echo** (voices) ·
+[Tonsor](https://github.com/CursedPrograms/Changeling-Tonsor) (hairstyles) ·
+realtime: [Tiresias](https://github.com/CursedPrograms/Changeling-Tiresias-Realtime) ·
+[Chronos](https://github.com/CursedPrograms/Changeling-Chronos-Realtime) ·
+[Natio](https://github.com/CursedPrograms/Changeling-Natio-Realtime) ·
+[Cosmetics](https://github.com/CursedPrograms/Changeling-Cosmetics-Realtime).*
 
 Train the voices the Changelings speak with. Echo turns about 15 minutes of one person's speech into an
 [RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) voice model; CopyCat Realtime and
