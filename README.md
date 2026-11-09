@@ -46,14 +46,17 @@ two Piper voices. An NVIDIA GPU is needed for training (6 GB is enough).
 4. **Train:** slicing, reading pitch and sound, training (a completion bar with the epoch and the time left), indexing.
    About 300 epochs makes a good voice: an hour or two on a 6 GB card.
 5. **Try it:** pick a recording and hear it in the new voice.
-6. **Send it to the apps:** `voices/<name>.pth` and `.index` are copied to CopyCat Realtime and Mosaic Mask.
+6. **Use it live:** CopyCat Realtime's **Echo** switch (and `--echo`) speaks female and male in `echo_female` and
+   `echo_male`. It starts `echo/live.py` here, in Echo's own environment, and pipes the microphone through it a
+   quarter second at a time: about 0.3 s behind you, under 100 ms of work per quarter second on a 6 GB card.
 
 **Unattended:** `python echo/train_both.py 300` gets the models, makes the speech and trains both built-in voices
 one after the other. Here that took about 100 minutes each on a 6 GB card. Measured on a test clip:
 - the male reader through `echo_female` (+12 semitones) went from 158 to 301 Hz;
 - the female reader through `echo_male` (-12) went from 195 to 97 Hz.
 
-Both voices are also kept in `F:\AIModelsvcoices`.
+Both voices are also kept in `F:\AIModels
+vcoices`.
 
 ## How it works
 
