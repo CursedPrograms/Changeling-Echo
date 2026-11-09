@@ -22,7 +22,7 @@ SAMPLE_RATE = 40000
 STAGES = ["Slicing the speech", "Reading pitch and sound", "Training", "Indexing"]
 
 
-def _run(args, stage, progress, epochs=None):
+def _run(args, stage, progress, epochs=None, label=None):
     """One Applio command; reports (stage, fraction or None) as it goes."""
     proc = subprocess.Popen([PYTHON, "core.py", *map(str, args)], cwd=APPLIO, stdout=subprocess.PIPE,
                             stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace",
@@ -39,7 +39,7 @@ def _run(args, stage, progress, epochs=None):
                 progress(stage, min(1.0, int(m.group(1)) / epochs))
         print(line, flush=True)
     if proc.wait() != 0 or any("failed" in t.lower() for t in tail[-2:]):
-        raise RuntimeError(f"{STAGES[stage]} failed: " + (tail[-1] if tail else "no output"))
+        raise RuntimeError(f"{label or STAGES[stage]} failed: " + (tail[-1] if tail else "no output"))
 
 
 def train(name, dataset, epochs=300, batch_size=8, progress=None):
@@ -86,7 +86,8 @@ def convert(name, wav_in, wav_out, pitch=0):
     """Speak a recording with a trained voice (to try it): Applio's infer."""
     pth = os.path.join(VOICES, name + ".pth")
     index = os.path.join(VOICES, name + ".index")
+    wav_in, wav_out = os.path.abspath(wav_in), os.path.abspath(wav_out)   # Applio runs in its own folder
     _run(["infer", "--input-path", wav_in, "--output-path", wav_out, "--pth-path", pth,
           "--index-path", index if os.path.exists(index) else "", "--pitch", pitch, "--f0-method", "rmvpe",
-          "--index-rate", 0.6, "--protect", 0.33, "--export-format", "WAV"], 0, None)
+          "--index-rate", 0.6, "--protect", 0.33, "--export-format", "WAV"], 0, None, label="Converting")
     return wav_out

@@ -48,6 +48,13 @@ two Piper voices. An NVIDIA GPU is needed for training (6 GB is enough).
 5. **Try it:** pick a recording and hear it in the new voice.
 6. **Send it to the apps:** `voices/<name>.pth` and `.index` are copied to CopyCat Realtime and Mosaic Mask.
 
+**Unattended:** `python echo/train_both.py 300` gets the models, makes the speech and trains both built-in voices
+one after the other. Here that took about 100 minutes each on a 6 GB card. Measured on a test clip:
+- the male reader through `echo_female` (+12 semitones) went from 158 to 301 Hz;
+- the female reader through `echo_male` (-12) went from 195 to 97 Hz.
+
+Both voices are also kept in `F:\AIModelsvcoices`.
+
 ## How it works
 
 `echo/dataset.py` makes the speech with Piper (the same one DREAM speaks with; it loads the voice once).
