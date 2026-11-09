@@ -2,7 +2,7 @@
 
     <Echo>/venv/Scripts/python.exe echo/live.py echo_female
 
-Runs in Echo's own environment (torch, Applio), so the apps that use it (Changeling CopyCat Realtime, Mosaic Mask)
+Runs in Echo's own environment (torch, Applio), so the apps that use it (Changeling Simia Realtime, Mosaic Mask)
 don't need any of that: they start this as a child process and talk to it through its stdin and stdout.
 
 The conversation, all little-endian:

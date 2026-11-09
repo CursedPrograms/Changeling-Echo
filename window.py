@@ -2,7 +2,7 @@
 
 Steps, top to bottom: pick a voice (the built-in female or male one, or your own recordings), make or check
 its speech, get the models once, train (a completion bar with the stage and the epoch), try it on a recording,
-and send it to the apps that speak with it (CopyCat Realtime, Mosaic Mask).
+and send it to the apps that speak with it (Simia Realtime, Mosaic Mask).
 """
 import os
 import shutil
@@ -23,7 +23,7 @@ KOFI = "https://ko-fi.com/cursedentertainment"
 PINK = "#e0408a"
 SOURCES = {"Female (Amy)": "female", "Male (Ryan)": "male", "My recordings": "mine"}
 # where trained voices go: every app that speaks with them
-APPS = [os.path.join(STUDIO, "Changeling-CopyCat-Realtime", "voices"),
+APPS = [os.path.join(STUDIO, "Changeling-Simia-Realtime", "voices"),
         os.path.join(os.path.dirname(STUDIO), "Mosaic-Mask", "voices")]
 
 
@@ -120,7 +120,7 @@ class Window:
         self._step(page, "6", "Send it to the apps")
         self.voices_note = ctk.CTkLabel(page, text="", text_color="gray60", wraplength=640, justify="left")
         self.voices_note.pack(anchor="w", padx=12)
-        self.send_btn = ctk.CTkButton(page, text="Copy it to CopyCat Realtime and Mosaic Mask", command=self.send)
+        self.send_btn = ctk.CTkButton(page, text="Copy it to Simia Realtime and Mosaic Mask", command=self.send)
         self.send_btn.pack(fill="x", padx=12, pady=4)
 
         links = ctk.CTkFrame(page, fg_color="transparent")

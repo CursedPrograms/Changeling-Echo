@@ -14,8 +14,8 @@
 **Website:** https://cursedprograms.github.io/Changeling-Echo/
 
 *Part of the Changeling family, all together in [Changeling Studio](https://github.com/CursedPrograms/Changeling-Studio):
-[CopyCat](https://github.com/CursedPrograms/Changeling-CopyCat) ·
-[CopyCat Realtime](https://github.com/CursedPrograms/Changeling-CopyCat-Realtime) ·
+[Simia](https://github.com/CursedPrograms/Changeling-Simia) ·
+[Simia Realtime](https://github.com/CursedPrograms/Changeling-Simia-Realtime) ·
 [Tiresias](https://github.com/CursedPrograms/Changeling-Tiresias) (gender) ·
 [Chronos](https://github.com/CursedPrograms/Changeling-Chronos) (age) ·
 [Natio](https://github.com/CursedPrograms/Changeling-Natio) (where in the world) ·
@@ -28,7 +28,7 @@ realtime: [Tiresias](https://github.com/CursedPrograms/Changeling-Tiresias-Realt
 [Cosmeta](https://github.com/CursedPrograms/Changeling-Cosmeta-Realtime).*
 
 Train the voices the Changelings speak with. Echo turns about 15 minutes of one person's speech into an
-[RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) voice model; CopyCat Realtime and
+[RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) voice model; Simia Realtime and
 Mosaic Mask then turn your voice into that one, live. The speech can be a built-in voice (Piper's Amy for a woman,
 Ryan for a man, reading 100 sentences in three deliveries) or your own recordings.
 
@@ -52,7 +52,7 @@ two Piper voices. An NVIDIA GPU is needed for training (6 GB is enough).
 4. **Train:** slicing, reading pitch and sound, training (a completion bar with the epoch and the time left), indexing.
    About 300 epochs makes a good voice: an hour or two on a 6 GB card.
 5. **Try it:** pick a recording and hear it in the new voice.
-6. **Use it live:** CopyCat Realtime's **Echo** switch (and `--echo`) speaks female and male in `echo_female` and
+6. **Use it live:** Simia Realtime's **Echo** switch (and `--echo`) speaks female and male in `echo_female` and
    `echo_male`. It starts `echo/live.py` here, in Echo's own environment, and pipes the microphone through it a
    quarter second at a time: about 0.3 s behind you, under 100 ms of work per quarter second on a 6 GB card.
 

@@ -5,7 +5,7 @@ Four stages, each Applio's own command line (core.py, in Applio/, run in Echo's 
     2. extract     each piece's pitch (RMVPE) and its sound (ContentVec)
     3. train       teach a voice model (HiFi-GAN, starting from Applio's pretrained one), N epochs
     4. index       the search index that makes the voice sound more like the speaker
-Then the newest weights and the index are copied to voices/, where CopyCat Realtime and Mosaic Mask take them.
+Then the newest weights and the index are copied to voices/, where Simia Realtime and Mosaic Mask take them.
 """
 import glob
 import os
